@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technik-Nachhilfe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            /*transition: transform 0.2s, box-shadow 0.2s;*/
+        }
+
+        /*
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+         */
+
+        h2 {
+            color: #28a745;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .rechner {
+            background: #fefefe;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin-top: 1rem;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .ergebnis {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <h1>Technik-Nachhilfe für alle</h1>
+    <p>Individuelle Unterstützung – verständlich erklärt</p>
+</header>
+
+<main>
+    <section>
+        <h2>Über mich</h2>
+        <p>
+            Hallo! Mein Name ist Jasmin Röder. Ich helfe Ihnen dabei, moderne Technik besser zu verstehen und sicher anzuwenden.
+            Ob Smartphone, Computer oder Internet – gemeinsam finden wir den einfachsten Weg.
+        </p>
+    </section>
+
+    <section>
+        <h2>Mein Angebot</h2>
+        <p>
+            Ich biete private Nachhilfe im Umgang mit Technik an. Ob es nun ein konkretes Problem ist, oder der Umgang mit Ihrem Gerät im Allgemeinen.
+            Dabei gehe ich individuell auf Ihre Fragen ein und versuche die bestmöglichste Lösung für Sie zu finden!
+        </p>
+    </section>
+
+    <section>
+
+        <h2>Preise</h2>
+        <p>
+            Für die private Nachhilfe nehme ich 15€/Std.<br>
+            Außerdem berechne ich für den Hin- und Rückweg eine Pauschale abhängig vom aktuellen Spritpreis (stand 29.09.2025 ~1,70€/l) und meinem Vebrauch (ca. 8liter/100 km), so dass die Kosten im Preis enthalten sind. <br>
+            Der Betrag nach dem Komma wird aufgerundet,
+            da ich für die Fahrtkosten lediglich den Preis des Benzins berechne und daraus keinen Gewinn schlage. Beispielsweise würde eine Entfernung von 40km einen Preis von 10,88€ bedeuten, welcher auf 11€ gerundet wird.
+            Im Fahrtkostenrechner können Sie herausfinden wie viel die Fahrt bis zu Ihnen kosten würde. Dafür müssen Sie die Entfernung von Ihnen bis zu meinem Wohnort 63667 Ulfa eingeben.
+            <p>
+            (Mit einem Klick auf ➡️ <a href="https://www.google.com/maps/dir/63667+Nidda-Ulfa//@50.46266,8.9666039,13z/data=!4m8!4m7!1m5!1m1!1s0x47bce664b7d6d755:0x4d68d4da23170d72!2m2!1d9.0078891!2d50.4626127!1m0?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D">Google Maps</a> ⬅️ können Sie Ihre Entfernung zu mir herausfinden.)
+            </p>
+
+        </p>
+
+
+        <div class="rechner">
+            <h2>Fahrtkostenrechner</h2>
+            <label for="distanz">Entfernung (in km):</label>
+            <input type="number" id="distanz" placeholder="z.B. 25">
+
+            <button onclick="berechnen()">Berechnen</button>
+            <div class="ergebnis" id="ergebnis"></div>
+        </div>
+
+        <div> <b>Hinweis:</b> ab einer Entfernung von mehr als 75km berechne ich für den zeitlichen Aufwand +15€</div>
+
+    </section>
+
+    <section>
+        <h2>Kontakt</h2>
+        <p>
+            Haben Sie Interesse oder Fragen? Dann melden Sie sich gerne bei mir:
+        </p>
+        <p>
+            📧 <a href="mailto:jasminroeder001@gmail.com">jasminroeder001@gmail.com</a><br>
+        </p>
+        <a href="mailto:jasminroeder001@gmail.com" class="button">Jetzt Kontakt aufnehmen</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Jasmin Röder – Technik-Nachhilfe</p>
+</footer>
+
+<script>
+    // feste Werte (kannst du später dynamisch machen)
+    const spritpreis = 1.70;   // € pro Liter
+    const verbrauch = 8;       // Liter pro 100 km
+
+    function berechnen() {
+        const distanz = parseFloat(document.getElementById("distanz").value);
+        if (isNaN(distanz) || distanz <= 0) {
+            document.getElementById("ergebnis").innerText = "Bitte eine gültige Distanz eingeben.";
+            return;
+        }
+
+        // Kosten pro km
+        const kostenProKm = (verbrauch * spritpreis) / 100;
+        // Gesamtkosten
+        let gesamtkosten = (distanz * 2) * kostenProKm;
+        if (distanz > 75) {
+            gesamtkosten += 15;
+        }
+
+        document.getElementById("ergebnis").innerText =
+            `Fahrtkosten für ${distanz} km: ${gesamtkosten.toFixed(2)} € (ca. ${kostenProKm.toFixed(2)} €/km)`;
+    }
+</script>
+
+</body>
+</html>
