@@ -172,7 +172,7 @@
             <div class="ergebnis" id="ergebnis"></div>
         </div>
 
-        <div> <b>Hinweis:</b> ab einer Entfernung von mehr als 75km berechne ich für den zeitlichen Aufwand +15€</div>
+        <div> <b>Hinweis:</b> ab einer Entfernung von mehr als 70km berechne ich für den zeitlichen Aufwand +15€</div>
 
     </section>
 
@@ -208,7 +208,7 @@
         const kostenProKm = (verbrauch * spritpreis) / 100;
         // Gesamtkosten
         let gesamtkosten = (distanz * 2) * kostenProKm;
-        if (distanz > 75) {
+        if (distanz > 70) {
             gesamtkosten += 15;
         }
 
